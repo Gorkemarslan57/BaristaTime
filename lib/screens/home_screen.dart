@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -7,12 +8,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CoffeeMenuScreen(),
+      home: HomeScreen(),
     );
   }
 }
 
-class CoffeeMenuScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   final List<Map<String, String>> coffeeMenu = [
     {'name': 'Espresso', 'price': '35₺'},
     {'name': 'Cappuccino', 'price': '80₺'},
@@ -26,7 +27,7 @@ class CoffeeMenuScreen extends StatelessWidget {
     {'name': 'Flat White', 'price': '85₺'},
   ];
 
-  CoffeeMenuScreen({super.key});
+  HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
