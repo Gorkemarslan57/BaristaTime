@@ -74,7 +74,7 @@ git  clone [proje-adresi]
 
 bash
 
-cd [proje-adı]
+cd [Kahve Diyari]
 
 
 
