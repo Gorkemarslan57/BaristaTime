@@ -2,6 +2,7 @@ import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
+import 'package:flutter_app/core/themes.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
@@ -9,14 +10,14 @@ class LoadingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown, 
+      backgroundColor: colors["secondary"],
       body: SizedBox.expand(
         child: Column(
           children: [
             Expanded(
               child: SizedBox(
-                width: 350,
-                height: 350,
+                width: 500,
+                height: 500,
                 child: Image.asset(
                   'assets/images/logog.png',
                   fit: BoxFit.contain,
@@ -24,7 +25,7 @@ class LoadingScreen extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: () => context.go("/home"), // Burada yönlendirme yapılacak
+              onTap: () => context.go("/home"),
               child: SizedBox(
                 width: 300,
                 child: DotLottieLoader.fromAsset(
