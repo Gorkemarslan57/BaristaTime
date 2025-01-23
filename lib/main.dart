@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/core/themes.dart';
 import 'package:go_router/go_router.dart';
 import 'screens/loading_screens.dart';
 import 'screens/home_screen.dart';
@@ -31,10 +32,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Flutter App',
       theme: ThemeData(
-        primarySwatch: Colors.brown,
+      primaryColor : colors["onPrimary"],
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routerConfig: _router, // Yönlendirme yapılandırması
+      debugShowCheckedModeBanner: false,
     );
   }
 }

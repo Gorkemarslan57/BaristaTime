@@ -1,22 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/core/themes.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-    );
-  }
-}
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -26,9 +10,18 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Kahve Menüsü'),
         centerTitle: true,
-        backgroundColor: colors["onSurface"]
+        backgroundColor: colors["primary"], // Arka plan rengi
+        titleTextStyle: TextStyle(
+          color: colors["onPrimary"], // Başlık metni rengi
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+        iconTheme: IconThemeData(
+          color: colors["onPrimary"], // İkon rengi
+        ),
       ),
-      body: CoffeeMenuCard(),
+      body:
+          CoffeeMenuCard(), // Doğru şekilde kullanılması için burası düzeltildi.
     );
   }
 }
@@ -54,31 +47,32 @@ class CoffeeMenuCard extends StatelessWidget {
     CoffeeMenuItem(
       name: 'Espresso',
       description: 'Yoğun kafein ve zengin aroma',
-      price: 30,
+      price: 70,
       imageUrl: 'assets/images/espresso.jpg',
+
     ),
     CoffeeMenuItem(
       name: 'Cappuccino',
       description: 'Espresso, buharla ısıtılmış süt ve süt köpüğü',
-      price: 80,
+      price: 70,
       imageUrl: 'assets/images/cappuccino.jpg',
     ),
     CoffeeMenuItem(
       name: 'Latte',
       description: 'Espresso ve kadifemsi süt köpüğü',
-      price: 50,
+      price: 70,
       imageUrl: 'assets/images/latte.jpg',
     ),
     CoffeeMenuItem(
       name: 'Americano',
       description: 'Espresso ve sıcak su ile hazırlanır',
-      price: 40,
+      price: 70,
       imageUrl: 'assets/images/Americano.jpeg',
     ),
     CoffeeMenuItem(
       name: 'Mocha',
       description: 'Çikolata, espresso ve süt karışımı',
-      price: 60,
+      price: 70,
       imageUrl: 'assets/images/Mocha.jpeg',
     ),
     CoffeeMenuItem(
@@ -90,7 +84,7 @@ class CoffeeMenuCard extends StatelessWidget {
     CoffeeMenuItem(
       name: 'Macchiato',
       description: 'Espresso üzerine süt köpüğü',
-      price: 45,
+      price: 70,
       imageUrl: 'assets/images/Macchiato.jpeg',
     ),
   ];
@@ -138,13 +132,14 @@ class CoffeeMenuCard extends StatelessWidget {
                             style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
+                              
                             ),
                           ),
                           Text(
                             '₺${item.price.toStringAsFixed(2)}',
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 18,
-                              color: Color(0xFF4CAF50),
+                              color: colors["success"],
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -155,21 +150,25 @@ class CoffeeMenuCard extends StatelessWidget {
                         item.description,
                         style: TextStyle(
                           fontSize: 14,
-                          color: Colors.grey[600],
+                          color: colors["onSurface"],
                         ),
                       ),
                       const SizedBox(height: 12),
                       ElevatedButton(
-                        onPressed: () {
-                          // Sipariş verme işlevi buraya eklenebilir
-                        },
+                        onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF4CAF50),
+                          backgroundColor: colors["success"],
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                        child: const Text('Sipariş Ver'),
+                        child: Text(
+                          'Sipariş Ver',
+                          style: TextStyle(
+                            color: colors[
+                                "onPrimary"], // Burada istediğiniz rengi seçebilirsiniz
+                          ),
+                        ),
                       ),
                     ],
                   ),
