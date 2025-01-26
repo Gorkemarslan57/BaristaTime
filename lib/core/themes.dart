@@ -18,7 +18,6 @@ const colors = {
   "onSecondary": Color.fromARGB(255, 255, 230, 204),
   "surface": Color.fromARGB(255, 244, 235, 224),
   "onSurface": Color.fromARGB(255, 77, 42, 33),
-  "success": Color.fromARGB(255, 160, 100, 80),
   "error": Color.fromARGB(255, 128, 57, 50),
   "onError": Color.fromARGB(255, 255, 247, 230),
 };
@@ -30,7 +29,6 @@ const darkColors = {
   "onSecondary": Color.fromARGB(255, 255, 230, 204),
   "surface": Color.fromARGB(255, 44, 30, 25),
   "onSurface": Color.fromARGB(255, 224, 208, 192),
-  "success": Color.fromARGB(255, 160, 100, 80),
   "error": Color.fromARGB(255, 128, 57, 50),
   "onError": Color.fromARGB(255, 216, 196, 177),
 };
@@ -82,7 +80,7 @@ final darkTheme = ThemeData(
   ),
   textTheme: TextTheme(
     bodySmall: GoogleFonts.roboto(
-        // fontSize: 30,
+    
         ),
     bodyMedium: GoogleFonts.roboto(),
     bodyLarge: GoogleFonts.roboto(),

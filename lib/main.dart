@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/core/routes.dart';
 import 'package:provider/provider.dart';
-import 'package:go_router/go_router.dart';
 import 'core/themes.dart';
-import 'screens/loading_screens.dart';
-import 'screens/home_screen.dart'; // Ana Sayfa ekranı
-import 'screens/hakkında.dart';   // Hakkında ekranı
-import 'screens/sepet.dart';      // Sepet ekranı
+
 
 void main() {
   runApp(
@@ -21,27 +18,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GoRouter _router = GoRouter(
-      initialLocation: '/loading',
-      routes: [
-        GoRoute(
-          path: '/loading',
-          builder: (context, state) => const LoadingScreen(),
-        ),
-        GoRoute(
-          path: '/home',
-          builder: (context, state) => const HomeScreen(),
-        ),
-        GoRoute(
-          path: '/about',       // Hakkında ekranı
-          builder: (context, state) =>  const Hakkinda(),
-        ),
-        GoRoute(
-          path: '/cart',        // Sepet ekranı
-          builder: (context, state) =>  const Sepet(),
-        ),
-      ],
-    );
 
     return Consumer<ThemeProvider>(
       builder: (context, themeProvider, child) {
@@ -50,7 +26,7 @@ class MyApp extends StatelessWidget {
           themeMode: themeProvider.isDark ? ThemeMode.dark : ThemeMode.light,
           theme: lightTheme,
           darkTheme: darkTheme,
-          routerConfig: _router,
+          routerConfig: router,
           debugShowCheckedModeBanner: false,
         );
       },
