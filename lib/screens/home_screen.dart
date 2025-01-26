@@ -10,13 +10,13 @@ class HomeScreen extends StatelessWidget {
     'assets/images/affogato.jpg',
     'assets/images/Americano.jpeg',
     'assets/images/cappuccino.jpg',
-    'assets/images/espresso.jpg',
-    'assets/images/FlatWhite.jpeg',
+    'assets/images/espresso.png',
+    'assets/images/FlatWhite.png',
     'assets/images/irish_coffee.jpg',
-    'assets/images/latte.jpg',
-    'assets/images/Macchiato.jpeg',
-    'assets/images/Mocha.jpeg',
-    'assets/images/turk_kahvesi.jpg',
+    'assets/images/latte.png',
+    'assets/images/Macchiato.png',
+    'assets/images/Mocha.png',
+    'assets/images/turk_kahvesi.png',
   ];
 
   final List<String> productNames = [
