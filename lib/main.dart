@@ -3,7 +3,6 @@ import 'package:flutter_app/core/routes.dart';
 import 'package:provider/provider.dart';
 import 'core/themes.dart';
 
-
 void main() {
   runApp(
     ChangeNotifierProvider(
@@ -12,7 +11,6 @@ void main() {
     ),
   );
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

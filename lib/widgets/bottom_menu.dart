@@ -19,7 +19,7 @@ class BottomMenu extends StatelessWidget {
             onPressed: () {
               context.go("/home");
             },
-            icon:  Icon(
+            icon: Icon(
               CupertinoIcons.home,
               color: colors['onSurface'],
             ),
@@ -28,7 +28,7 @@ class BottomMenu extends StatelessWidget {
             onPressed: () {
               context.push("/cart");
             },
-            icon:  Icon(
+            icon: Icon(
               CupertinoIcons.cart,
               color: colors['onSurface'],
             ),
@@ -37,7 +37,7 @@ class BottomMenu extends StatelessWidget {
             onPressed: () {
               context.push("/about");
             },
-            icon:  Icon(
+            icon: Icon(
               CupertinoIcons.info_circle,
               color: colors['onSurface'],
             ),

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/bottom_menu.dart';
 import 'package:flutter_app/core/themes.dart';
@@ -33,7 +32,7 @@ class HomeScreen extends StatelessWidget {
     'Türk Kahvesi',
   ];
 
-  final double productPrice = 80; 
+  final double productPrice = 80;
 
   @override
   Widget build(BuildContext context) {
@@ -41,30 +40,27 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'BaristaTime',
-         style: Theme.of(context).textTheme.displayLarge?.copyWith(
+          style: Theme.of(context).textTheme.displayLarge?.copyWith(
                 color: Theme.of(context).colorScheme.surface,
-                  ),
-        ),
-       actions: [
-            IconButton(
-              icon: Icon(
-                Provider.of<ThemeProvider>(context).isDarkMode
-                    ? Icons.light_mode
-                    : Icons.dark_mode,
-                color: Theme.of(context).colorScheme.onSecondary,
-                size: 34,
               ),
-              onPressed: () {
-                Provider.of<ThemeProvider>(context, listen: false)
-                    .toggleTheme();
-              },
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Provider.of<ThemeProvider>(context).isDarkMode
+                  ? Icons.light_mode
+                  : Icons.dark_mode,
+              color: Theme.of(context).colorScheme.onSecondary,
+              size: 34,
             ),
-          ],
-
-        backgroundColor: colors['onSurface'],        
+            onPressed: () {
+              Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+            },
+          ),
+        ],
+        backgroundColor: colors['onSurface'],
         centerTitle: true,
       ),
-
       backgroundColor: colors['surface'],
       body: Column(
         children: [
@@ -77,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisSpacing: 8,
                 crossAxisSpacing: 8,
               ),
-              itemCount: productImages.length,  
+              itemCount: productImages.length,
               itemBuilder: (context, index) => Card(
                 clipBehavior: Clip.antiAlias,
                 child: Column(
@@ -86,9 +82,11 @@ class HomeScreen extends StatelessWidget {
                     AspectRatio(
                       aspectRatio: 1,
                       child: Container(
-                        color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                        color: Theme.of(context)
+                            .colorScheme
+                            .surfaceContainerHighest,
                         child: Image.asset(
-                          productImages[index],  
+                          productImages[index],
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -99,14 +97,14 @@ class HomeScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            productNames[index],  
+                            productNames[index],
                             style: Theme.of(context).textTheme.titleMedium,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            '₺${productPrice.toStringAsFixed(2)}',  
+                            '₺${productPrice.toStringAsFixed(2)}',
                             style: Theme.of(context).textTheme.titleLarge,
                           ),
                           const SizedBox(height: 8),
