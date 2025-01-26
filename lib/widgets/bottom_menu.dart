@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/core/themes.dart';
 import 'package:go_router/go_router.dart';
 
 class BottomMenu extends StatelessWidget {
@@ -18,24 +19,27 @@ class BottomMenu extends StatelessWidget {
             onPressed: () {
               context.go("/home");
             },
-            icon: const Icon(
+            icon:  Icon(
               CupertinoIcons.home,
+              color: colors['onSurface'],
             ),
           ),
           IconButton(
             onPressed: () {
               context.push("/cart");
             },
-            icon: const Icon(
+            icon:  Icon(
               CupertinoIcons.cart,
+              color: colors['onSurface'],
             ),
           ),
           IconButton(
             onPressed: () {
               context.push("/about");
             },
-            icon: const Icon(
+            icon:  Icon(
               CupertinoIcons.info_circle,
+              color: colors['onSurface'],
             ),
           ),
         ],

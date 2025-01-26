@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/bottom_menu.dart';
 import 'package:flutter_app/core/themes.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -40,12 +42,30 @@ class HomeScreen extends StatelessWidget {
         title: Text(
           'BaristaTime',
          style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.onSecondary,
+                color: Theme.of(context).colorScheme.surface,
                   ),
         ),
+       actions: [
+            IconButton(
+              icon: Icon(
+                Provider.of<ThemeProvider>(context).isDarkMode
+                    ? Icons.light_mode
+                    : Icons.dark_mode,
+                color: Theme.of(context).colorScheme.onSecondary,
+                size: 34,
+              ),
+              onPressed: () {
+                Provider.of<ThemeProvider>(context, listen: false)
+                    .toggleTheme();
+              },
+            ),
+          ],
+
+        backgroundColor: colors['onSurface'],        
         centerTitle: true,
-      
       ),
+
+      backgroundColor: colors['surface'],
       body: Column(
         children: [
           Expanded(
@@ -66,9 +86,7 @@ class HomeScreen extends StatelessWidget {
                     AspectRatio(
                       aspectRatio: 1,
                       child: Container(
-                        color: Theme.of(context)
-                            .colorScheme
-                            .surfaceContainerHighest,
+                        color: Theme.of(context).colorScheme.surfaceContainerHighest,
                         child: Image.asset(
                           productImages[index],  
                           fit: BoxFit.cover,
