@@ -27,13 +27,13 @@ class VoiceScreen extends StatelessWidget {
             slivers: [
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
                   child: Column(
                     children: [
                      
                       GridView.count(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         crossAxisCount: 2,
                         mainAxisSpacing: 16,
                         crossAxisSpacing: 16,
@@ -64,18 +64,18 @@ class VoiceScreen extends StatelessWidget {
                             onTap: () => showDialog(
                               context: context,
                               builder: (context) => AlertDialog(
-                                icon: Icon(Icons.warning),
-                                title: Text("Uyarı"),
-                                content: Text(
+                                icon: const Icon(Icons.warning),
+                                title: const Text("Uyarı"),
+                                content: const Text(
                                     "Hesabınızı silmek istediğinizden emin misiniz?"),
                                 actions: [
                                   TextButton(
                                     onPressed: () => context.pop(),
-                                    child: Text("İptal"),
+                                    child: const Text("İptal"),
                                   ),
                                   FilledButton(
                                     onPressed: () {},
-                                    child: Text("Sil"),
+                                    child: const Text("Sil"),
                                   ),
                                 ],
                               ),
@@ -95,7 +95,7 @@ class VoiceScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: BottomMenu(),
+      bottomNavigationBar: const BottomMenu(),
     );
   }
 }
@@ -127,7 +127,7 @@ class ActionCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(icon, size: 32, color: color),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Text(
                 title,
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
