@@ -26,22 +26,27 @@
 
 ## Özellikler
 
-- [Ana özellik 1]
+- Giriş ekranı
 
-- [Ana özellik 2]
+- Kahve menüsü
 
-- [Ana özellik 3]
+- Sepet sayfası
+
+- Profil ekranı
+
+- Tema değişimi
+
 
   
-
 ## Kullanılan Teknolojiler
 
 - Flutter
 
 - Dart
 
-- [Diğer teknolojiler]
+- Lottie
 
+- Google Fonts 
   
 
 ## Başlangıç
@@ -50,11 +55,10 @@
 
 ### Gereksinimler
 
-- Flutter SDK (sürüm X.X.X)
+- Flutter SDK (sürüm 3.5.4)
 
-- Dart SDK (sürüm X.X.X)
+- Dart SDK (sürüm 3)
 
-- [Diğer gerekli yazılımlar]
 
   
 
@@ -64,7 +68,7 @@
 
 bash
 
-git  clone [proje-adresi]
+git  clone [https://github.com/Gorkemarslan57/BaristaTime.git]
 
 
 
@@ -74,7 +78,7 @@ git  clone [proje-adresi]
 
 bash
 
-cd [Kahve Diyari]
+cd [Q-flutter]
 
 
 
@@ -106,15 +110,11 @@ flutter  run
 
 lib/
 
-├── modeller/ # Veri modelleri
+├── core/ # Projenin ana dosyaları
 
 ├── ekranlar/ # Uygulama ekranları
 
-├── widgets/ # Tekrar kullanılabilir arayüz öğeleri
-
-├── servisler/ # API servisleri
-
-└── yardımcılar/ # Yardımcı fonksiyonlar
+└── widgets/ # Tekrar kullanılabilir arayüz öğeleri
 
 
 
@@ -123,8 +123,13 @@ lib/
 ## Ekran Görüntüleri
 
 [Uygulama ekran görüntüleri buraya eklenecek]
+![](assets/images/UygulamaEkranları/CoffeeMenu.png)
+![](assets/images/UygulamaEkranları/AboutScreen.png)
+![](assets/images/UygulamaEkranları/Profile.screen.png)
+![](assets/images/UygulamaEkranları/VoiceScreen.png)
 
   
+
 
 ## Projeye Katkı Sağlama
 
@@ -148,6 +153,6 @@ lib/
 
 ## İletişim
 
-- Proje Bağlantısı: [GitHub repository linki]
+- Proje Bağlantısı: [[GitHub repository linki](https://github.com/Gorkemarslan57/BaristaTime.git)]
 
 - İstinye Üniversitesi: [https://www.istinye.edu.tr/](https://www.istinye.edu.tr/)
