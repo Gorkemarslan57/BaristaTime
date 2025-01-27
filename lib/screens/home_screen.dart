@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/bottom_menu.dart';
 import 'package:flutter_app/core/themes.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/cupertino.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -64,6 +66,39 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
       ),
       backgroundColor: colors['surface'],
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: const Text('Görkem Arslan'),
+              accountEmail: const Text('gorkemarslan942@gmail.com'),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Icon(
+                  CupertinoIcons.person,
+                  color: colors['primary'],
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(CupertinoIcons.info_circle),
+              title: const Text('Hakkında'),
+              onTap: () {
+                context.push("/about");
+              },
+            ),
+            ListTile(
+              leading: const Icon(CupertinoIcons.moon),
+              title: const Text('Gece/Gündüz Teması'),
+              onTap: () {
+                Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+                Navigator.pop(context); // Drawer'ı kapat
+              },
+            ),
+          ],
+        ),
+      ),
       body: Column(
         children: [
           Expanded(

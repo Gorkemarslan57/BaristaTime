@@ -54,7 +54,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           FilledButton.icon(
-            onPressed: () {},
+            onPressed: () => context.go ("/login"),
             icon: const Icon(Icons.logout),
             label: const Text("Hesaptan Çıkış Yap"),
             style: FilledButton.styleFrom(
@@ -64,15 +64,6 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
           ),
-          if (context.canPop())
-            TextButton.icon(
-              onPressed: () => context.pop(),
-              icon: const Icon(Icons.arrow_back),
-              label: const Text("Geri Dön"),
-              style: TextButton.styleFrom(
-                minimumSize: const Size(double.infinity, 50),
-              ),
-            ),
         ],
       ),
       bottomNavigationBar: const BottomMenu(),

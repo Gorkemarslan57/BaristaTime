@@ -35,15 +35,6 @@ class BottomMenu extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              context.push("/about");
-            },
-            icon: Icon(
-              CupertinoIcons.info_circle,
-              color: colors['onSurface'],
-            ),
-          ),
-          IconButton(
-            onPressed: () {
             context.go("/profile");
             },
             icon: Icon(
@@ -51,15 +42,7 @@ class BottomMenu extends StatelessWidget {
               color: colors['onSurface'],
             ),
           ),
-          IconButton(
-            onPressed: () {
-            context.push("/login");
-            },
-            icon: Icon(
-              Icons.logout,
-              color: colors['onSurface'],
-            ),
-          ),
+
           IconButton(
             onPressed: () {
             context.push("/voice");
