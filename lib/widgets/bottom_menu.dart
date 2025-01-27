@@ -42,6 +42,33 @@ class BottomMenu extends StatelessWidget {
               color: colors['onSurface'],
             ),
           ),
+          IconButton(
+            onPressed: () {
+            context.go("/profile");
+            },
+            icon: Icon(
+              CupertinoIcons.person,
+              color: colors['onSurface'],
+            ),
+          ),
+          IconButton(
+            onPressed: () {
+            context.push("/login");
+            },
+            icon: Icon(
+              Icons.logout,
+              color: colors['onSurface'],
+            ),
+          ),
+          IconButton(
+            onPressed: () {
+            context.push("/voice");
+            },
+            icon: Icon(
+              Icons.android,
+              color: colors['onSurface'],
+            ),
+          ),
         ],
       ),
     );

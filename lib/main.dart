@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/core/routes.dart';
 import 'package:provider/provider.dart';
 import 'core/themes.dart';
-
 void main() {
   runApp(
     ChangeNotifierProvider(

@@ -61,7 +61,11 @@ final lightTheme = ThemeData(
     headlineLarge: GoogleFonts.aBeeZee(),
     displaySmall: GoogleFonts.abrilFatface(),
     displayMedium: GoogleFonts.abrilFatface(),
-    displayLarge: GoogleFonts.abrilFatface(),
+    displayLarge: GoogleFonts.roboto(
+      fontWeight: FontWeight.w500,
+      fontSize: 48,
+
+    ),
   ),
 );
 
@@ -93,6 +97,9 @@ final darkTheme = ThemeData(
     headlineLarge: GoogleFonts.aBeeZee(),
     displaySmall: GoogleFonts.abrilFatface(),
     displayMedium: GoogleFonts.abrilFatface(),
-    displayLarge: GoogleFonts.abrilFatface(),
+    displayLarge: GoogleFonts.roboto(
+       fontWeight: FontWeight.w500,
+       fontSize: 48,
+    ),
   ),
 );
