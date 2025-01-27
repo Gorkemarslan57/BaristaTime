@@ -1,4 +1,3 @@
-
 import 'package:flutter_app/screens/about.dart';
 import 'package:flutter_app/screens/cart.dart';
 import 'package:flutter_app/screens/login_screen.dart';
@@ -9,9 +8,8 @@ import 'package:go_router/go_router.dart';
 import '../screens/loading_screens.dart';
 import "../screens/home_screen.dart";
 
-
 final router = GoRouter(
-  initialLocation: '/', 
+  initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
@@ -36,14 +34,13 @@ final router = GoRouter(
         child: const LoginScreen(),
       ),
     ),
-   GoRoute(
-      path: '/profile',
-      pageBuilder: (context, state) => NoTransitionPage<void>(
-        key: state.pageKey,
-        child: const ProfileScreen(),
-      )
-      ),
-      GoRoute(
+    GoRoute(
+        path: '/profile',
+        pageBuilder: (context, state) => NoTransitionPage<void>(
+              key: state.pageKey,
+              child: const ProfileScreen(),
+            )),
+    GoRoute(
       path: '/register',
       pageBuilder: (context, state) => NoTransitionPage<void>(
         key: state.pageKey,
@@ -57,6 +54,5 @@ final router = GoRouter(
         child: const VoiceScreen(),
       ),
     ),
-    
   ],
 );
