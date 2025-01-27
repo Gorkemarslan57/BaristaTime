@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
               title: const Text('Gece/Gündüz Teması'),
               onTap: () {
                 Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
-                Navigator.pop(context); // Drawer'ı kapat
+                Navigator.pop(context);
               },
             ),
           ],
