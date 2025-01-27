@@ -19,7 +19,9 @@ class HomeScreen extends StatelessWidget {
     'assets/images/Macchiato.png',
     'assets/images/Mocha.png',
     'assets/images/turk_kahvesi.png',
-    'assets/images/ChaiTeaLatte.png'
+    'assets/images/ChaiTeaLatte.png',
+    'assets/images/Frappucino.png',
+    'assets/images/sıcak_cikolata.png',
   ];
 
   final List<String> productNames = [
@@ -34,6 +36,9 @@ class HomeScreen extends StatelessWidget {
     'Mocha',
     'Türk Kahvesi',
     'Chai Tea Latte',
+    'Frappucino',
+    'Sıcak Çikolata',
+    
   ];
 
   final double productPrice = 80;
