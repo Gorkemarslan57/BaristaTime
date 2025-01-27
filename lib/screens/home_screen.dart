@@ -38,7 +38,6 @@ class HomeScreen extends StatelessWidget {
     'Chai Tea Latte',
     'Frappucino',
     'Sıcak Çikolata',
-    
   ];
 
   final double productPrice = 80;
@@ -67,6 +66,18 @@ class HomeScreen extends StatelessWidget {
             },
           ),
         ],
+       leading: Builder(
+  builder: (context) => IconButton(
+    icon: Icon(
+      Icons.menu,
+      color: Theme.of(context).colorScheme.onSecondary,
+      size: 34,
+    ),
+    onPressed: () {
+      Scaffold.of(context).openDrawer();
+    },
+  ),
+),
         backgroundColor: colors['onSurface'],
         centerTitle: true,
       ),
@@ -97,7 +108,8 @@ class HomeScreen extends StatelessWidget {
               leading: const Icon(CupertinoIcons.moon),
               title: const Text('Gece/Gündüz Teması'),
               onTap: () {
-                Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+                Provider.of<ThemeProvider>(context, listen: false)
+                    .toggleTheme();
                 Navigator.pop(context);
               },
             ),
@@ -118,6 +130,8 @@ class HomeScreen extends StatelessWidget {
               itemCount: productImages.length,
               itemBuilder: (context, index) => Card(
                 clipBehavior: Clip.antiAlias,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -156,6 +170,10 @@ class HomeScreen extends StatelessWidget {
                             label: const Text('Sepete Ekle'),
                             style: FilledButton.styleFrom(
                               minimumSize: const Size(double.infinity, 36),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(
+                                    12), // Kenar yumuşatma
+                              ),
                             ),
                           ),
                         ],
