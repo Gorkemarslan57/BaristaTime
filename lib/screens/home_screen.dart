@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
     icon: Icon(
       Icons.menu,
       color: Theme.of(context).colorScheme.onSecondary,
-      size: 34,
+      size: 24,
     ),
     onPressed: () {
       Scaffold.of(context).openDrawer();
@@ -156,7 +156,6 @@ class HomeScreen extends StatelessWidget {
                             productNames[index],
                             style: Theme.of(context).textTheme.titleMedium,
                             maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
                           ),
                           const SizedBox(height: 4),
                           Text(
@@ -172,7 +171,7 @@ class HomeScreen extends StatelessWidget {
                               minimumSize: const Size(double.infinity, 36),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
-                                    12), // Kenar yumuşatma
+                                    12), 
                               ),
                             ),
                           ),

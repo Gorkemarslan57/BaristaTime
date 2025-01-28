@@ -19,7 +19,7 @@ class LoadingScreen extends StatelessWidget {
                 width: 500,
                 height: 500,
                 child: Image.asset(
-                  'assets/images/logog.png',
+                  'assets/images/BaristaTime.jpeg',
                   fit: BoxFit.contain,
                 ),
               ),
