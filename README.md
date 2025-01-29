@@ -129,6 +129,16 @@ lib/
 ![](assets/images/UygulamaEkranları/VoiceScreen.png)
 ![](assets/images/UygulamaEkranları/Drawer.png)
 
+
+## Demo Video
+
+
+<video width="600" controls>
+  <source src="DemoVideo.mp4" type="video/mp4">
+</video>
+
+
+
   
 
 
