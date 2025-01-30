@@ -8,7 +8,9 @@
 
 ## Proje Hakkında
 
-[Projenin kısa tanımı ve amacı buraya yazılacak]
+BaristaTime, şık ve kullanıcı dostu bir arayüzle kahve menüsü sunan bir uygulamadır. Kullanıcılar, çeşitli kahve seçeneklerini keşfeder ve kolayca seçim yapabilir.
+
+Amaç: Kullanıcılara estetik bir tasarımla sunulan, pratik ve şık bir kahve menüsü deneyimi sağlamak.
 
   
 
