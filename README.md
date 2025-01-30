@@ -117,27 +117,29 @@ themes.dart
 
 ├── ekranlar/ 
 
-about.dart
-cart.dart
-home_screen.dart
-loading_screens.dart
-login_screen.dart
-profile_screen.dart
-register_screen.dart
-voice_screen.dart
+- about.dart
+- cart.dart
+- home_screen.dart
+- loading_screens.dart
+- login_screen.dart
+- profile_screen.dart
+- register_screen.dart
+- voice_screen.dart
+
 
 └── widgets/ 
 
-Text 
-SizedBox
-IconThemeData 
-Title 
-IconButton
-Expanded
-Card
-GridView.builder
-Column
-BottomNavigationBar
+- Text
+- SizedBox
+- IconThemeData
+- Title
+- IconButton
+- Expanded
+- Card
+- GridView.builder
+- Column
+- BottomNavigationBar
+
 
 
 
