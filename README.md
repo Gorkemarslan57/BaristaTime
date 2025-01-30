@@ -110,11 +110,34 @@ flutter  run
 
 lib/
 
-├── core/ # Projenin ana dosyaları
+├── core/ 
+routes.dart
+themes.dart
 
-├── ekranlar/ # Uygulama ekranları
 
-└── widgets/ # Tekrar kullanılabilir arayüz öğeleri
+├── ekranlar/ 
+
+about.dart
+cart.dart
+home_screen.dart
+loading_screens.dart
+login_screen.dart
+profile_screen.dart
+register_screen.dart
+voice_screen.dart
+
+└── widgets/ 
+
+Text 
+SizedBox
+IconThemeData 
+Title 
+IconButton
+Expanded
+Card
+GridView.builder
+Column
+BottomNavigationBar
 
 
 
@@ -133,9 +156,7 @@ lib/
 ## Demo Video
 
 
-<video width="600" controls>
-  <source src="DemoVideo.mp4" type="video/mp4">
-</video>
+
 
 
 
